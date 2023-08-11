@@ -1,17 +1,17 @@
 import React from 'react';
 import '../styles/Home.css'
 import Menu from '../components/Menu';
-const Home = () => {
+const About = () => {
   return (
     <div>
     <header>
-      <Menu page={'home'} />
+      <Menu page={'about'} />
     </header>
     <div className='home'>
-        Conteúdo da Home
+        Conteúdo sobre nós
     </div>
     </div>
   );
 }
 
-export default Home;
+export default About;

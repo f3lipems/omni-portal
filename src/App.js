@@ -1,17 +1,21 @@
-import './App.css';
-import Menu from './components/Menu';
+import React from 'react';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-function App() {
+import 'bootswatch/dist/cerulean/bootstrap.css'
+import './App.css';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Blog from './pages/Blog';
+const App = () => {
   return (
-    <div>
-      <header>
-      <h1>Omni Portal</h1>
-      <Menu />
-      </header>
-      <body>
-        <Home />
-      </body>
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path='/' element={<Home/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/contact' element={<Contact/>}/>
+        <Route path='/blog' element={<Blog/>}/>
+      </Routes>
+    </Router>
   );
 }
 
