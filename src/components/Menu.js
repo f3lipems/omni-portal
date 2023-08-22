@@ -9,7 +9,6 @@ const home = (<span>Pagina Inicial</span>);
 const about = (<span>Sobre Nós</span>);
 const contact = (<span>Contato</span>);
 const blog = (<span>Blog</span>);
-
   const handleOnClick = () => {
     if(aria === "false"){
       setAria("true")
@@ -36,10 +35,6 @@ const blog = (<span>Blog</span>);
         <NavItem name={contact} reference={"/contact"} active={props.page === "contact" ? "active" : ""}/>
         <NavItem name={blog} reference={"/blog"} active={props.page === "blog" ? "active" : ""}/>
       </ul>
-      <form className="d-flex">
-        <input className="form-control me-sm-2" type="search" placeholder="Search" />
-        <button className="btn btn-secondary my-2 my-sm-0" type="submit">Pesquisar</button>
-      </form>
     </div>
   </div>
 </nav>
